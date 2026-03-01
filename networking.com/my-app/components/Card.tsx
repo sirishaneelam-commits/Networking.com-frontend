@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import image from '../public/download (5).jpeg';
+import image from '../public/download (6).jpeg';
 
 const flip = {
   animate: {
@@ -26,9 +26,9 @@ export default function Card() {
   return (
     <>
       <>
-        <div className="mt-30 mr-40">
-          <motion.div
-            className="h-90 w-120 bg-white border rounded-md"
+        <div className=" -translate-y-40 mb-0 mr-40">
+         <motion.div
+            className="h-80 w-120 border rounded-md bg-transparent" // changed bg-white -> bg-transparent
             variants={flip}
             initial="initial"
             animate="animate"
@@ -38,8 +38,8 @@ export default function Card() {
               src={image.src}
               alt="buisness image"
               width={500}
-              height={530}
-              className="ml-10 rounded-md -translate-x-10 translate-y-5"
+              height={550}
+              className="ml-10 rounded-md -translate-x-10 "
               variants={appear}
               initial="initial"
               animate="animate"
