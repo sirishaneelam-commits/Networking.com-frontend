@@ -4,6 +4,7 @@ import Card from "@/components/Card";
 import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import Homebody from "@/components/Homebody";
+import HomeFooter from "@/components/HomeFooter";
 export default function Home() {
   return (
     <>
@@ -20,7 +21,7 @@ export default function Home() {
           <div className="flex items-center justify-end h-full">
             <Card></Card>
           </div>
-
+          <HomeFooter></HomeFooter>
         </main>
       </div>
     </>
