@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 export default function Register() {
   const router = useRouter();
 
+
   useEffect(() => {
     router.push("/Prices"); 
   }, [router]);

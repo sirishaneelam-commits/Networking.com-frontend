@@ -1,5 +1,13 @@
+"use client"
 import { ReactNode } from "react";
+import axios from 'axios'
 
+const handlebasic=async()=>{
+  const res =await axios.post(
+    'http://localhost:8000/api/users/Pay?plan=basic',
+  )
+  window.location.href = res.data.url;
+}
 type PayCardProps = {
   children: ReactNode; 
 };
@@ -10,18 +18,15 @@ export default function PayCard({ children }: PayCardProps) {
       <div className="w-60 h-96 bg-white relative">
         {children}
 
-        <div className="absolute  top-39 ml-5">
+        <div className="absolute ml-5" style={{ top: "156px" }}>
             Features
         </div>
    
-        <hr className="absolute top-50 left-0 w-full border-[#949494]" />
+        <hr className="absolute left-0 w-full border-[#949494]" style={{ top: "200px" }} />
 
-        <div className="flex items-center justify-center absolute top-80 ml-10">
-          <div className="h-10 w-40 bg-[#C4BE1D] text-white flex items-center justify-center">
-            <div>Pay</div>
-          </div>
+        
         </div>
       </div>
-    </div>
+    
   );
 }

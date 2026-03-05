@@ -21,7 +21,11 @@ export default function Home() {
           <div className="flex items-center justify-end h-full">
             <Card></Card>
           </div>
-          <HomeFooter></HomeFooter>
+
+          <HomeFooter>
+
+          </HomeFooter>
+          
         </main>
       </div>
     </>

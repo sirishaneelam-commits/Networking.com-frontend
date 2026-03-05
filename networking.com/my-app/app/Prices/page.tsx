@@ -1,6 +1,22 @@
+'use client'
 import BulletPoint from "@/components/BulletPoint"
 import PayCard from "@/components/payCard"
+import axios from 'axios'
 
+const handlebasic = async () => {
+  const res = await axios.post(
+    'http://localhost:8000/api/users/Pay?plan=basic',
+  )
+  window.location.href = res.data.url;
+  console.log('http request sent!')
+}
+const handleadvanced = async () => {
+  const res = await axios.post(
+    'http://localhost:8000/api/users/Pay?plan=advanced',
+  )
+  window.location.href = res.data.url;
+  console.log('http request sent!')
+}
 export default function Prices(){
     return(
         <>
@@ -31,6 +47,13 @@ export default function Prices(){
                          </div>
                        </div>
                     </div>
+                <button
+                      type="button"
+                      className="absolute bottom-10 left-5 h-10 w-40 bg-yellow-400 text-white flex items-center justify-center z-10"
+                      onClick={handlebasic}
+                    >
+                      Pay
+                </button>
                     <div className="absolute left-12 bottom-35">
                       Acess to basic content
                     </div>
@@ -71,6 +94,13 @@ export default function Prices(){
                          </div>
                        </div>
                     </div>
+                        <button
+                      type="button"
+                      className="absolute bottom-10 left-5 h-10 w-40 bg-yellow-400 text-white flex items-center justify-center z-10"
+                      onClick={handleadvanced}
+                    >
+                      Pay
+                </button>
                     <div className="absolute left-12 bottom-35">
                       Acess to more features 
                     </div>
