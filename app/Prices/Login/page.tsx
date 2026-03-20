@@ -1,5 +1,4 @@
 import Authcard from "@/components/authcard"
-import { signIn } from "next-auth/react"
 export default function CreateUser(){
     return(
         <>

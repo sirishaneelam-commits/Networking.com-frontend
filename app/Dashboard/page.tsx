@@ -19,7 +19,7 @@ export default function Dashboard(){
   useEffect(() => {
     const fetchCards = async () =>{
       try{
-        const res = await axios.get("http://localhost:8000/api/cards")
+        const res = await axios.get("https://networking-com-api-11.onrender.com/api/cards")
         setCards(res.data)
       }
       catch(err){

@@ -14,7 +14,7 @@ function Description() {
   // Make createCard async and await axios
   const createCard = async () => {
     try {
-      await axios.post("http://localhost:8000/api/cards", {
+      await axios.post("https://networking-com-api-11.onrender.com/api/cards", {
         title,
         description,
         phone_number: phoneNumber,
