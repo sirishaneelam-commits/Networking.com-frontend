@@ -7,7 +7,7 @@ function CreatePost(){
     const router = useRouter()
     const authUser = async () => {
         try{
-            await axios.post("https://networking-com-api-11.onrender.com/api/users/login",{
+            await axios.post("https://networking-com-frontend-ofly-kz0mzbj60.vercel.app/api/users/login",{
             username:username,
             password:password
         })

@@ -12,14 +12,14 @@ if (typeof window !== "undefined") {
 
 const handlebasic = async () => {
   const res = await axios.post(
-    'https://networking-com-api-11.onrender.com/api/users/Pay?plan=basic',
+    'https://networking-com-frontend-ofly-kz0mzbj60.vercel.app/api/users/Pay?plan=basic',
   )
   window.location.href = res.data.url;
   console.log('http request sent!')
 }
 const handleadvanced = async () => {
   const res = await axios.post(
-    'https://networking-com-api-11.onrender.com/api/users/Pay?plan=advanced',
+    'https://networking-com-frontend-ofly-kz0mzbj60.vercel.app/api/users/Pay?plan=advanced',
   )
   window.location.href = res.data.url;
   console.log('http request sent!')
