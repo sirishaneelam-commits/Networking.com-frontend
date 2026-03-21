@@ -13,7 +13,7 @@ export default function Form() {
     const password = (form.elements.namedItem("password") as HTMLInputElement).value;
    
     try {
-      await axios.post("https://networking-com-frontend-ofly-kz0mzbj60.vercel.app/api/users/register", { // lowercase
+      await axios.post("https://networking-com-api-11.onrender.com/api/users/register", { // lowercase
         username, 
         password
       });
