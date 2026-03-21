@@ -4,7 +4,7 @@ import axios from 'axios'
 
 const handlebasic=async()=>{
   const res =await axios.post(
-    'http://localhost:8000/api/users/Pay?plan=basic',
+    'https://networking-com-api-11.onrender.com/api/users/Pay?plan=basic',
   )
   window.location.href = res.data.url;
 }
